@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import SudokuField from "./SodukoField";
+import SudokuField from "./SudokuField";
 
 export default class SudokuBoard extends Component {
     render() {

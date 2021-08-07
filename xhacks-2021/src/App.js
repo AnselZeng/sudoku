@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import './App.css';
 import generator from "sudoku";
 import SudokuBoard from "./components/SudokuBoard";
+import Pad from "./components/Pad";
 import puzzles from './examples.js'
 
 window.generator = generator;
@@ -70,6 +71,7 @@ class App extends Component {
           </h1>
         </header>
         <SudokuBoard sudoku={this.state.sudoku}/>
+        <Pad/>
       </div>
     );
   }

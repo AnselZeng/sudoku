@@ -5,35 +5,20 @@ export default class Pad extends Component {
         mode: 'normal',
     }
 
-    changeMode(button) {
-        this.setState({
-            mode: button
-        })
+    handlePress(num) {
+        console.log(num)
     }
 
-    render() { 
+    render() {
         return (
-        <div>
-            <div className="normal">
-                <button onClick={() => this.changeMode("normal")}>
-                    Normal
-                </button>
-            </div>
-            <div className="centre">
-                <button onClick={() => this.changeMode("centre")}>
-                    Centre
-                </button>
-            </div>
-            <div className="corner">
-                <button onClick={() => this.changeMode("corner")}>
-                    Corner
-                </button>
-            </div>
-            <div className="colour">
-                <button onClick={() => this.changeMode("colour")}>
-                    Colour
-                </button>
-            </div>
-        </div>);
+        <div className="pad"> {
+            [1,2,3,4,5,6,7,8,9].map((num) => {
+                return (
+                    <button className={num.toString()} onClick={this.handlePress(num)}>{num}</button>
+                )
+            })
+        }
+        </div>
+        );
     }
 }

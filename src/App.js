@@ -76,8 +76,8 @@ class App extends Component {
         <header className="App-header">
           <h1>Sudoku Stack</h1>
         </header>
+        <Pad/>
         <SudokuBoard sudoku={this.state.sudoku} onChange={this.handleChange} />
-
         <button onClick={this.solveSudoku}>Solve it Magically!</button>
       </div>
     );

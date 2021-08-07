@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 export default class Pad extends Component {
     state = {
         mode: 'normal',
-
     }
 
     changeMode(button) {
@@ -16,22 +15,22 @@ export default class Pad extends Component {
         return (
         <div>
             <div className="normal">
-                <button onClick={this.changeMode("normal")}>
+                <button onClick={() => this.changeMode("normal")}>
                     Normal
                 </button>
             </div>
             <div className="centre">
-                <button onClick={this.changeMode("centre")}>
+                <button onClick={() => this.changeMode("centre")}>
                     Centre
                 </button>
             </div>
             <div className="corner">
-                <button onClick={this.changeMode("centre")}>
+                <button onClick={() => this.changeMode("corner")}>
                     Corner
                 </button>
             </div>
             <div className="colour">
-                <button onClick={this.changeMode("colour")}>
+                <button onClick={() => this.changeMode("colour")}>
                     Colour
                 </button>
             </div>

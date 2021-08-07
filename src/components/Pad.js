@@ -2,20 +2,38 @@ import React, { Component } from 'react';
 
 export default class Pad extends Component {
     state = {
-        mode = 'default',
-
+        mode: 'normal',
     }
 
     changeMode(button) {
-        switch(button){
-            
-        }
+        this.setState({
+            mode: button
+        })
     }
 
     render() { 
         return (
         <div>
-            <button>1</button>
+            <div className="normal">
+                <button onClick={() => this.changeMode("normal")}>
+                    Normal
+                </button>
+            </div>
+            <div className="centre">
+                <button onClick={() => this.changeMode("centre")}>
+                    Centre
+                </button>
+            </div>
+            <div className="corner">
+                <button onClick={() => this.changeMode("corner")}>
+                    Corner
+                </button>
+            </div>
+            <div className="colour">
+                <button onClick={() => this.changeMode("colour")}>
+                    Colour
+                </button>
+            </div>
         </div>);
     }
 }

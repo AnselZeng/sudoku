@@ -1,4 +1,4 @@
-# AT Soduko
+# AT Sudoku
 
 A React Sudoku simulator made in collaboration with @AnselZeng as an entry for xHacks 2021.
 

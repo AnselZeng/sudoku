@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Pad from "./Pad.js"
 
 export default class SudokuField extends Component {
   handleChange = e => {
@@ -9,10 +8,10 @@ export default class SudokuField extends Component {
   };
 
   handleBlur = e => {
-    const value = Pad.state.pressed;
-    if (Pad.state.pressed !== 0) {
+    const value = this.pad.state.pressed;
+    if (value !== 0) {
       this.props.onChange({ ...this.props.field, value: value });
-      Pad.setState({
+      this.pad.setState({
         pressed: 0
       })
     }

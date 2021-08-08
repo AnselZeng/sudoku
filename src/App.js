@@ -48,7 +48,6 @@ class App extends Component {
         <header className="App-header">
           <h1>Sudoku</h1>
         </header>
-        <Pad/>
         <SudokuBoard sudoku={this.state.sudoku} onChange={this.handleChange} />
         <button class="button1" onClick={this.solveSudoku}>Solve Puzzle</button>
         <footer>Made by Ansel and Teddy.<br/>Copyright © 2021. All rights reserved.</footer>

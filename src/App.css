@@ -54,13 +54,3 @@ html {
 footer {
   margin-bottom: 2rem;
 }
-
-.pad {
-  display: inline-grid;
-  grid-template-columns: repeat(3, [col-start] 90px [col-end]);
-  position: fixed;
-  float: right;
-  height: 200px;
-  top: 400px;
-  right: 250px;
-}

@@ -52,7 +52,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>AT Soduko</h1>
+          <h1>AT Sudoku</h1>
         </header>
         <SudokuBoard sudoku={this.state.sudoku} onChange={this.handleChange} />
         <button class="button1" onClick={this.solveSudoku}>Solve Puzzle</button>

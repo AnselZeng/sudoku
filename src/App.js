@@ -4,7 +4,7 @@ import produce from "immer";
 import SudokuBoard from "./components/SudokuBoard";
 import "./App.css";
 import generator from "sudoku";
-import Pad from "./components/Pad";
+
 
 window.generator = generator;
 
@@ -42,15 +42,22 @@ class App extends Component {
     );
   };
 
+  newSudoku = e => {
+    this.setState(produce({}, () => ({
+      sudoku: generateSudoku()
+    })));
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Sudoku</h1>
+          <h1>AT Soduko</h1>
         </header>
         <SudokuBoard sudoku={this.state.sudoku} onChange={this.handleChange} />
         <button class="button1" onClick={this.solveSudoku}>Solve Puzzle</button>
-        <footer>Made by Ansel and Teddy.<br/>Copyright © 2021. All rights reserved.</footer>
+        <button class="button1" onClick={this.newSudoku}>New Puzzle</button>
+        <footer>Made by Ansel Zeng and Endreas Yohannes.<br/>Copyright © 2021. All rights reserved.</footer>
       </div>
     );
   }

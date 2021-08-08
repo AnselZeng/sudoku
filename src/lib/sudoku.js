@@ -1,4 +1,32 @@
 import generator from "sudoku";
+import puzzles from './examples.js'
+
+export function importSudoku() {
+  let count = 0
+  const index = Math.floor(Math.random() * 100)
+  const sudoku = puzzles[index]
+  const result = {rows: []}
+  for (let i = 0; i < 9; i++) {
+    const row = {cols: [], index: i}
+    for (let j = 0; j < 9; j++) {
+      let value = parseInt(sudoku[count]);
+      if (value === 0) {
+        value = null;
+      }
+      const col = {
+        row: i,
+        col: j,
+        value: value,
+        readonly: value !== null,
+        focused: false
+      };
+      row.cols.push(col);
+      count++
+    }
+    result.rows.push(row)
+  }
+  return result
+}
 
 export function generateSudoku() {
   const fromUrl = extractUrlData();
@@ -27,7 +55,8 @@ export function generateSudoku() {
         row: i,
         col: j,
         value: value,
-        readonly: value !== null
+        readonly: value !== null,
+        focused: false
       };
       row.cols.push(col);
     }

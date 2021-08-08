@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { generateSudoku, checkSolution, shareUrl } from "./lib/sudoku";
+import { generateSudoku, checkSolution } from "./lib/sudoku";
 import produce from "immer";
 import SudokuBoard from "./components/SudokuBoard";
 import "./App.css";
@@ -24,7 +24,6 @@ class App extends Component {
           const solved = checkSolution(state.sudoku);
           if (solved) {
             state.sudoku.solveTime = new Date();
-            state.sudoku.shareUrl = shareUrl(state.sudoku);
           }
         }
       })
@@ -47,11 +46,12 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Sudoku Stack</h1>
+          <h1>Sudoku</h1>
         </header>
         <Pad/>
         <SudokuBoard sudoku={this.state.sudoku} onChange={this.handleChange} />
-        <button onClick={this.solveSudoku}>Solve it Magically!</button>
+        <button class="button1" onClick={this.solveSudoku}>Solve Puzzle</button>
+        <footer>Made by Ansel and Teddy.<br/>Copyright © 2021. All rights reserved.</footer>
       </div>
     );
   }

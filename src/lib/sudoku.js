@@ -79,17 +79,6 @@ export function checkSolution(sudoku) {
   return true;
 }
 
-export function shareUrl(sudoku) {
-  const data = {
-    raw: sudoku.raw,
-    startTime: sudoku.startTime,
-    solvedTime: sudoku.solvedTime
-  };
-  const query = btoa(JSON.stringify(data));
-
-  return document.location.href.replace(/\?.+$/, "") + `?sudoku=${query}`;
-}
-
 function extractUrlData() {
   const match = document.location.search.match(/sudoku=([^&]+)/);
 

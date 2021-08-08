@@ -1,3 +1,7 @@
+html {
+  background-color: #fefae0;
+}
+
 .App {
   text-align: center;
 }
@@ -8,7 +12,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #283618;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -19,15 +23,21 @@
   margin-bottom: 2rem;
 }
 
-.field {
-  width: 3rem;
-  height: 3rem;
-  font-size: 2rem;
-  text-align: center;
-  color: #888;
+.button1 {
+  padding: 16px 32px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2rem;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white; 
+  color: #606c38;
+  border: 2px solid #606c38;
 }
-.field[readonly] {
-  color: #222;
+
+.button1:hover {
+  background-color: #606c38;
+  color: white;
 }
 
 .field {
@@ -35,10 +45,14 @@
   height: 3rem;
   font-size: 2rem;
   text-align: center;
-  color: #888;
+  color: #adb5bd;
 }
 .field[readonly] {
-  color: #222;
+  color: #212529;
+}
+
+footer {
+  margin-bottom: 2rem;
 }
 
 .pad {

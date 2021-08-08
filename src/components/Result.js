@@ -17,11 +17,6 @@ export default class Result extends Component {
     return (
       <div>
         <h2>You solved the sudoku in {elapsed} seconds</h2>
-        {opponent && <h3>Your opponent solved it in {opponent} seconds</h3>}
-        <p>
-          Challenge a friend (or enemy):{" "}
-          <a href={sudoku.shareUrl}>Share Link</a>{" "}
-        </p>
       </div>
     );
   }

@@ -1,6 +1,6 @@
 # AT Soduko
 
-A React Sudoku simulator made in collaboration with @AnselZeng as an entry for xHacks 2021.
+A React Sudoku simulator made in collaboration with [Ansel Zeng](https://github.com/AnselZeng) as an entry for xHacks 2021.
 
 ### Introduction:
 * This was inspired by my frustration with not being able to find a good Sudoku webapp.
